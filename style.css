@@ -29,3 +29,28 @@ nav ul { display: flex; list-style: none; gap: 1rem; }
     margin-right: auto; }
 .tour-card { border: 1px solid #d1d5db; padding: 1rem; border-radius: 10px; background: #f9fafb; }
 .tour-card:hover { border-color: #9aa5b1; }
+
+.price { color: #2f855a; font-weight: bold; font-size: 1.2rem; }
+
+/* Forms */
+.login-box, .register-box { max-width: 350px; margin: 2rem auto; padding: 2rem; background: #f7f9fb; border-radius: 10px; }
+input { width: 100%; padding: 0.5rem; margin: 0.5rem 0; border: 1px solid #d1d5db; border-radius: 5px; }
+input:focus { outline: none; border-color: #3a6ea5; }
+
+.error { color: #842029; background: #f8d7da; padding: 0.5rem; margin: 0.5rem 0; border-radius: 5px; }
+.success { color: #1e7e34; background: #d4edda; padding: 0.5rem; margin: 0.5rem 0; border-radius: 5px; }
+
+/* Dashboard */
+.stats { display: flex; gap: 1rem; margin: 1rem 0; }
+.stat-card { background: #f1f5f9; padding: 1rem; border-radius: 10px; text-align: center; flex: 1; }
+.admin-box, .guide-box, .user-box { background: #f1f5f9; padding: 1rem; margin: 1rem 0; border-radius: 10px; }
+
+main {
+    padding: 2rem;
+    flex: 1;   /* kjo e shtyn footer poshtë */
+}
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 1px solid #d1d5db; padding: 0.5rem; text-align: left; }
+th { background: #3a6ea5; color: white; }
+
+footer { background: #2f3e4e; color: #d9e2ec; text-align: center; padding: 1rem; margin-top: 3.5rem; }
