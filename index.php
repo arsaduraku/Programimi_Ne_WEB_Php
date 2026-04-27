@@ -57,6 +57,7 @@ $theme = $_COOKIE['theme'] ?? 'light';
     <footer>&copy; 2026 Tour Guide Prishtina</footer>
 </div>
 
+
 <style>
 <?php if($theme == 'dark'): ?>
 body { background: #1a1a2e; }
