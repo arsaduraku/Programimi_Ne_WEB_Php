@@ -178,11 +178,11 @@ if (hasRole('admin')) {
             <tbody>
             <?php foreach($myBookings as $b): ?>
             <tr>
-                <td><?php echo htmlspecialchars($b['tour']); ?></td>
+                <td><?php echo htmlspecialchars($b['tour_name']); ?></td>
                 <td><?php echo $b['persons']; ?></td>
                 <td>€<?php echo number_format($b['total'],2); ?></td>
                 <td><?php echo $b['booking_date']; ?></td>
-                                    <td>
+                <td>
                         <span class="status-<?php echo $b['status']; ?>">
                             <?php echo match($b['status']) {
                                 'confirmed' => 'Konfirmuar',
