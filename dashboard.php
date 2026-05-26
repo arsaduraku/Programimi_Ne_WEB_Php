@@ -101,7 +101,7 @@ if (hasRole('admin')) {
         <!-- ADMIN PANEL - Te gjitha rezervimet -->
         <?php if(hasRole('admin')): ?>
         <div class="admin-box">
-            <h3>Administratori - Të gjitha rezervimet</h3>
+            <h3>Admin - Të gjitha rezervimet</h3>
             <?php if(empty($allBookings)): ?>
                 <p>Nuk ka rezervime ende.</p>
             <?php else: ?>
@@ -122,10 +122,10 @@ if (hasRole('admin')) {
                     <tr id="row-<?php echo $b['id']; ?>">
                         <td><?php echo htmlspecialchars($b['username']); ?></td>
                         <td><?php echo htmlspecialchars($b['tour_name']); ?></td>
-                        <td>.
+                        <td>
                             <?php echo $b['persons']; ?>
                             <?php if($b['persons'] > 5): ?>
-                                <small style="color:green; font-size:0.7rem;"> (10% zbritje)</small>
+                                <small style="color:green;"> (10% zbritje)</small>
                             <?php endif; ?>
                         </td>
                         <td>€<?php echo number_format($b['total'],2); ?></td>
@@ -142,7 +142,8 @@ if (hasRole('admin')) {
                             </span>
                         </td>
                         <td>
-                                                   <select id="sel-<?php echo $b['id']; ?>">
+                            <!-- AJAX – ndrysho status pa refresh -->
+                            <select id="sel-<?php echo $b['id']; ?>">
                             <option value="pending"   <?php echo $b['status']=='pending'   ?'selected':''; ?>>Pending</option>
                             <option value="confirmed" <?php echo $b['status']=='confirmed' ?'selected':''; ?>>Konfirmuar</option>
                             <option value="cancelled" <?php echo $b['status']=='cancelled' ?'selected':''; ?>>Anuluar</option>
