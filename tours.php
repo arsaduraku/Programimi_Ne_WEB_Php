@@ -65,7 +65,7 @@ $theme = $_COOKIE['theme'] ?? 'light';
                 <?php endif; ?>
 
                 <?php if (isLogged() && hasRole('user')): ?>
-                    //Forma rezervimit – dorezohet me AJAX 
+                    <!-- Forma rezervimit – dorezohet me AJAX -->
                     <div style="margin-top:1rem;">
                         <label style="font-size:.85rem;">Numri i personave:</label>
                         <input type="number" id="persons-<?php echo $tour['id']; ?>"
